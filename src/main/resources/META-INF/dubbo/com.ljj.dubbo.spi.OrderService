@@ -1,1 +1,1 @@
-defaultImp=com.ljj.dubbo.spi.impl.OrderServiceImpl
+defaultImp=com.ljj.dubbo.spi.dubbo.impl.OrderServiceImpl

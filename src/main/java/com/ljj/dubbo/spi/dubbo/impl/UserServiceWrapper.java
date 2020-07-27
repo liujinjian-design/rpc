@@ -1,6 +1,6 @@
-package com.ljj.dubbo.spi.impl;
+package com.ljj.dubbo.spi.dubbo.impl;
 
-import com.ljj.dubbo.spi.UserService;
+import com.ljj.dubbo.spi.dubbo.UserService;
 
 /**
  * @Author: liujinjian

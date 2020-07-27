@@ -1,3 +1,3 @@
-userServiceImpl=com.ljj.dubbo.spi.impl.UserServiceImpl
-de=com.ljj.dubbo.spi.impl.UserServiceWrapper
-de1=com.ljj.dubbo.spi.impl.UserServiceWrapper1
+userServiceImpl=com.ljj.dubbo.spi.dubbo.impl.UserServiceImpl
+de=com.ljj.dubbo.spi.dubbo.impl.UserServiceWrapper
+de1=com.ljj.dubbo.spi.dubbo.impl.UserServiceWrapper1

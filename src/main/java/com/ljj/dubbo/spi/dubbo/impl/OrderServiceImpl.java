@@ -1,7 +1,7 @@
-package com.ljj.dubbo.spi.impl;
+package com.ljj.dubbo.spi.dubbo.impl;
 
 import com.alibaba.dubbo.common.URL;
-import com.ljj.dubbo.spi.OrderService;
+import com.ljj.dubbo.spi.dubbo.OrderService;
 
 /**
  * @Author: liujinjian

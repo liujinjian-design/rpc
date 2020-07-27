@@ -1,4 +1,4 @@
-package com.ljj.dubbo.spi;
+package com.ljj.dubbo.spi.dubbo;
 
 import com.alibaba.dubbo.common.extension.SPI;
 

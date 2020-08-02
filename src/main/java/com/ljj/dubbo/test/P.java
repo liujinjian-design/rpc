@@ -1,7 +1,6 @@
 package com.ljj.dubbo.test;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
 
 /**
  * @Author: liujinjian
@@ -10,8 +9,17 @@ import java.util.List;
 public class P {
 
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
 
-        System.out.println(list.remove(new Integer(8)));
+        BigDecimal bigDecimal = new BigDecimal("1.00");
+
+        int m = 100;
+
+        BigDecimal bd = new BigDecimal("100");
+
+        boolean fds = AmountTransferUtil.transferYuanToFen(bigDecimal) * m == AmountTransferUtil.transferYuanToFen(bd);
+
+        System.out.println(fds);
+
+
     }
 }

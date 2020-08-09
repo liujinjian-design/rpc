@@ -27,6 +27,9 @@ public class NIOServer {
         // 把serverSocketChannel注册到selector 关心时间 OP_ACCEPT
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
 
+
+        System.out.println("注册后的selectionKey 数量=" + selector.keys().size());
+
         // 循环等待客户端连接
         while (true) {
             // 等待一秒，如果没有事件发生，继续
@@ -43,10 +46,11 @@ public class NIOServer {
                 if (selectionKey.isAcceptable()) {
                     // 给该客户端生一个SocketChannel
                     SocketChannel socketChannel = serverSocketChannel.accept();
-                    System.out.println("客户端连接成功 生成了一个socketChannel "+socketChannel.hashCode());
+                    System.out.println("客户端连接成功 生成了一个socketChannel " + socketChannel.hashCode());
                     socketChannel.configureBlocking(false);
                     // 将SocketChannel 设置为非阻塞
                     socketChannel.register(selector, SelectionKey.OP_READ, ByteBuffer.allocate(1024));
+                    System.out.println("客户端连接后，注册的selectionKey 数量=" + selector.keys().size());
                 }
                 // 读事件
                 if (selectionKey.isReadable()) {

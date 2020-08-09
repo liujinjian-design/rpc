@@ -15,10 +15,17 @@ public class DubboTest {
         System.out.println(m);
         System.out.println(s);
 
-        long d = 920073118456002523L % 8;
-        long b = 920073118456002523L / 8 % 64;
+        long d = 6100 % 8;
+        long b = 6100 / 8 % 12;
         System.out.println(d);
         System.out.println(b);
+
+
+        long d2 = 920080618714021320L % 8;
+        long b2 = 920080618714021320L / 8 % 4;
+        System.out.println(d2);
+        System.out.println(b2);
+
 
 
         BigDecimal bigDecimal = new BigDecimal("1.2");

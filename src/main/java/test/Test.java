@@ -7,15 +7,14 @@ package test;
 public class Test {
 
     public static void main(String[] args) {
+        int i = 3400 % 8;
 
-        String s = "刘金鸡奖";
-        checkUnicodeStrMaxLen(s);
+        int j = 3400 / 8 % 12;
+
+        System.out.println(i);
+
+        System.out.println(j);
 
     }
 
-    private static int checkUnicodeStrMaxLen(String str) {
-        String regEx = "[\\u4e00-\\u9fa5]";
-        String term = str.replaceAll(regEx, "aa");
-        return term.length();
-    }
 }

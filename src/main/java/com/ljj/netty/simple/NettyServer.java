@@ -19,7 +19,7 @@ public class NettyServer {
         // 两个都是无限循环
         // bossGroup 和 workerGroup含有的子线程（NioEventLoop）个的数 默认cpu核数*2
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
-        NioEventLoopGroup workerGroup = new NioEventLoopGroup();
+        NioEventLoopGroup workerGroup = new NioEventLoopGroup(1);
         try {
             // 创建服务端的启动对象，配置启动参数
             ServerBootstrap bootstrap = new ServerBootstrap();
@@ -44,7 +44,7 @@ public class NettyServer {
 
             // 绑定一个端口并且同步，生成了一个ChannelFuture对象
             // 启动服务器（并绑定端口）
-            ChannelFuture cf = bootstrap.bind(6668).sync();
+            ChannelFuture cf = bootstrap.bind(6668);
 
             // 给cf注册监听器 监控我们关心的事件
             cf.addListener((ChannelFutureListener) future -> {

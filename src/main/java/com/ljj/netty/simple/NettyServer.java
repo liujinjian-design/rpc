@@ -11,6 +11,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  * @Date: 2020/8/10 23:33
  */
 public class NettyServer {
+
     public static void main(String[] args) throws InterruptedException {
 
         // 创建BossGroup 和 workerGroup

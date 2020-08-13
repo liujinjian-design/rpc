@@ -25,6 +25,11 @@ public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObjec
      */
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, HttpObject msg) throws Exception {
+        System.out.println("对应的channel = " + ctx.channel() + " pipeline = " + ctx.pipeline()
+                + " 通过pipeline获取channel " + ctx.pipeline().channel());
+
+        System.out.println("当前ctx的handler=" + ctx.handler());
+
         if (msg instanceof HttpRequest) {
             System.out.println("msg类型= " + msg.getClass());
             System.out.println("客户端地址 " + ctx.channel().remoteAddress());

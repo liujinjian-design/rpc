@@ -9,9 +9,9 @@ import java.util.UUID;
 public class Test {
 
     public static void main(String[] args) {
-        int i = (int) (100635127 % 8);
+        int i = (int) (920081718790003542L % 8);
 
-        int j = (int) (100635127 / 8 % 64);
+        int j = (int) (920081718790003542L / 8 % 4);
 
         System.out.println(i);
 

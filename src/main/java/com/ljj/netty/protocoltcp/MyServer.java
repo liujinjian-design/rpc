@@ -13,26 +13,21 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  */
 public class MyServer {
 
+    public static void main(String[] args) throws InterruptedException {
+        EventLoopGroup bossGroup = new NioEventLoopGroup();
+        NioEventLoopGroup workerGroup = new NioEventLoopGroup();
+        try {
 
-    public static void main(String[] args) {
-        System.out.println("12313");
+            ServerBootstrap serverBootstrap = new ServerBootstrap();
+            serverBootstrap.group(bossGroup, workerGroup)
+                    .channel(NioServerSocketChannel.class)
+                    .childHandler(new MyServerInitializer());
+
+            ChannelFuture future = serverBootstrap.bind(7000).sync();
+            future.channel().closeFuture().sync();
+        } finally {
+            bossGroup.shutdownGracefully();
+            workerGroup.shutdownGracefully();
+        }
     }
-
-//    public static void main(String[] args) throws InterruptedException {
-//        EventLoopGroup bossGroup = new NioEventLoopGroup();
-//        NioEventLoopGroup workerGroup = new NioEventLoopGroup();
-//        try {
-//
-//            ServerBootstrap serverBootstrap = new ServerBootstrap();
-//            serverBootstrap.group(bossGroup, workerGroup)
-//                    .channel(NioServerSocketChannel.class)
-//                    .childHandler(new MyServerInitializer());
-//
-//            ChannelFuture future = serverBootstrap.bind(7000).sync();
-//            future.channel().closeFuture().sync();
-//        } finally {
-//            bossGroup.shutdownGracefully();
-//            workerGroup.shutdownGracefully();
-//        }
-//    }
 }

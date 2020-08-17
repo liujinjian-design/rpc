@@ -21,8 +21,8 @@ public class DubboTest {
         System.out.println(b);
 
 
-        long d2 = 920080618714021320L % 8;
-        long b2 = 920080618714021320L / 8 % 4;
+        long d2 = 920081718798622936L % 8;
+        long b2 = 920081718798622936L / 8 % 4;
         System.out.println(d2);
         System.out.println(b2);
 

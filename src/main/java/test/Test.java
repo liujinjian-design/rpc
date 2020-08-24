@@ -1,5 +1,6 @@
 package test;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 /**
@@ -9,15 +10,20 @@ import java.util.UUID;
 public class Test {
 
     public static void main(String[] args) {
-        int i = (int) (920081718790003542L % 8);
+        int i = (int) (3400 % 8);
 
-        int j = (int) (920081718790003542L / 8 % 4);
+        int j = (int) (3400 / 8 % 12);
 
         System.out.println(i);
 
         System.out.println(j);
 
         System.out.println(UUID.randomUUID().toString().replaceAll("-", ""));
+
+
+        BigDecimal decimal = new BigDecimal("0.1");
+        int m = (int) (decimal.floatValue() * 10.0f);
+        System.out.println(m);
 
     }
 

@@ -15,14 +15,14 @@ public class DubboTest {
         System.out.println(m);
         System.out.println(s);
 
-        long d = 6100 % 8;
-        long b = 6100 / 8 % 12;
+        long d = 3400 % 8;
+        long b = 3400 / 8 % 12;
         System.out.println(d);
         System.out.println(b);
 
 
-        long d2 = 920081718798622936L % 8;
-        long b2 = 920081718798622936L / 8 % 4;
+        long d2 = 920081818842028042L % 8;
+        long b2 = 920081818842028042L / 8 % 4;
         System.out.println(d2);
         System.out.println(b2);
 

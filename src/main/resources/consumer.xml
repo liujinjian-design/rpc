@@ -11,7 +11,7 @@
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-    <dubbo:reference id="demoService" interface="com.ljj.dubbo.service.DemoService"/>
+    <dubbo:reference id="demoService" interface="com.ljj.dubbo.service.DemoService" timeout="50000" retries="-1"/>
 
 
     <dubbo:reference id="paymentService" interface="com.ljj.dubbo.service.PaymentService"></dubbo:reference>

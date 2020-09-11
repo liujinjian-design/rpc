@@ -10,8 +10,8 @@ public class DubboTest {
 
     public static void main(String[] args) {
 
-        long m = 100635127 % 8;
-        long s = 100635127 / 8 % 64;
+        long m = 100000487515L % 8;
+        long s = 100000487515L / 8 % 12;
         System.out.println(m);
         System.out.println(s);
 
@@ -21,8 +21,8 @@ public class DubboTest {
         System.out.println(b);
 
 
-        long d2 = 920081818842028042L % 8;
-        long b2 = 920081818842028042L / 8 % 4;
+        long d2 = 9200901421262390718L % 8;
+        long b2 = 9200901421262390718L / 8 % 4;
         System.out.println(d2);
         System.out.println(b2);
 

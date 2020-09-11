@@ -1,10 +1,8 @@
 package test;
 
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @Author: liujinjian
@@ -14,8 +12,11 @@ public class Test {
 
     public static void main(String[] args) {
 
-        long d2 = 12000003938L % 8;
-        long b2 = 12000003938L / 8 % 12;
+        List list = new ArrayList<>();
+
+
+        long d2 = 920090718958367181L % 8;
+        long b2 = 920090718958367181L / 8 % 4;
         System.out.println(d2);
         System.out.println(b2);
 

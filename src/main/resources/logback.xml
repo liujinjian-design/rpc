@@ -57,7 +57,7 @@
 
     <logger name="com.netflix.curator" level="OFF"/>
     <logger name="ch.qos.logback" level="OFF"/>
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="errorfile"/>
         <appender-ref ref="logfile"/>
         <appender-ref ref="stdout"/>

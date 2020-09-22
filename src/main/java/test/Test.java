@@ -15,13 +15,14 @@ public class Test {
         List list = new ArrayList<>();
 
 
-        long d2 = 920090718958367181L % 8;
-        long b2 = 920090718958367181L / 8 % 4;
+        System.out.println("couponcode1395".hashCode());
+        long d2 = Long.valueOf("couponcode1395".hashCode()) % 8;
+        long b2 = Long.valueOf("couponcode1395".hashCode()) / 8 % 64;
         System.out.println(d2);
         System.out.println(b2);
 
-        int i = (int) (22299 % 8);
-        int j = (int) (22299 / 8 % 12);
+        int i = (int) (197186295340L % 8);
+        int j = (int) (197186295340L / 8 % 64);
         System.out.println(i);
         System.out.println(j);
 
